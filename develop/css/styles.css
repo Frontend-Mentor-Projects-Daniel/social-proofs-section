@@ -87,6 +87,9 @@ select {
 /**------------------- 
 **    UTILITIES
 --------------------*/
+.mb--2 {
+  margin-bottom: 2rem;
+}
 
 /**------------------- 
 **     GENERAL
@@ -99,8 +102,13 @@ body {
 
 .main {
   margin: 2.5rem auto;
-  max-width: 62.5rem;
+  max-width: 75rem;
   padding: 15px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .main {
+  }
 }
 
 /**------------------------ 
@@ -108,28 +116,36 @@ body {
 -------------------------*/
 .section-social-proofs {
   display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  grid-template-rows: repeat(4, auto) 19.1875rem;
-  grid-row-gap: 1rem;
-  justify-items: center;
+  grid-template-columns: 23.4375rem;
+
+  justify-content: center;
+}
+
+/* TODO: Change to em everywhere its used */
+@media only screen and (min-width: 1200px) {
+  .section-social-proofs {
+  }
 }
 
 /**------------------- 
 **   TEXT CONTENT
 --------------------*/
 .section-social-proofs > .content {
-  /* justify-self: center; */
   display: flex;
   flex-direction: column;
 
   gap: 1rem;
   min-width: auto;
-  max-width: 350px;
+  max-width: 21.875rem;
+}
+@media only screen and (min-width: 1200px) {
+  .section-social-proofs > .content {
+  }
 }
 
 .content__title {
   color: hsl(var(--clr-very-dark-magenta));
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: var(--fw-bold);
   letter-spacing: 1px;
   line-height: 1.875rem;
@@ -142,9 +158,31 @@ body {
   text-align: center;
 }
 
+@media only screen and (min-width: 1200px) {
+  .content__title {
+    font-size: 3.25rem;
+    line-height: 3rem;
+    text-align: start;
+  }
+
+  .content__text {
+    font-size: 1.25rem;
+    line-height: 1.5625rem;
+    text-align: start;
+  }
+}
+
 /**------------------- 
 **     RATINGS
 --------------------*/
+.ratings-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  max-width: 21.5625rem;
+}
+
 .rating {
   display: flex;
   align-items: center;
@@ -154,8 +192,16 @@ body {
   background-color: hsl(var(--clr-light-grayish-magenta));
   border-radius: 10px;
   padding: 1rem;
-  min-width: 21.5625rem;
-  /* max-width: 450px; */
+}
+@media only screen and (min-width: 1200px) {
+  .rating--1 {
+  }
+
+  .rating--2 {
+  }
+
+  .rating--3 {
+  }
 }
 
 .rating__stars {
@@ -173,8 +219,21 @@ body {
 **   TESTIMONIALS
 --------------------*/
 /* this is here to add some space for mobile view */
-.mb-layout--1 {
+/* TODO: Delete this here and in the html */
+/* .mb-layout--1 {
   align-self: end;
+} */
+
+/* @media only screen and (min-width: 1200px) {
+  .mb-layout--1 {
+    align-self: auto;
+  }
+} */
+
+.testimonials-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .testimonial {
@@ -186,8 +245,17 @@ body {
   border-radius: 10px;
   padding: 2rem;
 
-  min-width: 16.125rem;
   max-width: 21.5625rem;
+}
+@media only screen and (min-width: 1200px) {
+  .testimonial--1 {
+  }
+
+  .testimonial--2 {
+  }
+
+  .testimonial--3 {
+  }
 }
 
 .testimonial__user {
