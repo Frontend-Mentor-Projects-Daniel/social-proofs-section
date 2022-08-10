@@ -29,17 +29,6 @@ h6,
 p {
   font-weight: 400;
 }
-/* set up the body */
-body {
-  font-family: var(--ff-sans-normal);
-  font-size: var(--fs-400);
-  color: hsl(var(--clr-white));
-  background-color: hsl(var(--clr-dark));
-  line-height: 1.5;
-  min-height: 100vh;
-  display: grid;
-  grid-template-rows: min-content 1fr;
-}
 /* make images easier to work with */
 img,
 picture {
@@ -71,11 +60,25 @@ select {
 :root {
   /* COLOURS */
 
+  /* primary */
+  --clr-very-dark-magenta: 300, 43%, 22%;
+  --clr-soft-pink: 333, 80%, 67%;
+
+  /* neutral */
+  --clr-dark-grayish-magenta: 303, 10%, 53%;
+  --clr-light-grayish-magenta: 300, 24%, 96%;
+  --clr-white: 0, 0%, 100%;
+
   /* FONT FAMILY */
+  --ff-league-spartan: 'League Spartan', sans-serif;
 
   /* FONT SIZE */
+  --fs-default: 0.9375rem;
 
   /* FONT WEIGHT */
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
 
   /* BREAKPOINTS */
 }
@@ -88,15 +91,18 @@ select {
 **     GENERAL
 --------------------*/
 body {
+  font-family: var(--ff-league-spartan);
+  font-size: var(--fs-default);
+  font-weight: var(--fw-regular);
 }
 
 .main {
-  display: flex;
+  /* display: flex;
   align-items: center;
   justify-content: center;
 
   width: 100vw;
-  min-height: 100vh;
+  min-height: 100vh; */
 }
 
 /**------------------------ 
@@ -105,5 +111,53 @@ body {
 .section-social-proofs {
 }
 
-.section-social-proofs > content {
+/**------------------- 
+**   TEXT CONTENT
+--------------------*/
+.section-social-proofs > .content {
+}
+
+.content__title {
+}
+
+.content__text {
+}
+
+/**------------------- 
+**     RATINGS
+--------------------*/
+.rating {
+}
+
+.rating__stars {
+}
+
+.rating__text {
+}
+
+/**------------------- 
+**   TESTIMONIALS
+--------------------*/
+.testimonial {
+}
+
+.testimonial__user {
+}
+
+.testimonial__user-image {
+}
+
+.testimonial__user-image img {
+}
+
+.testimonial__user-information {
+}
+
+.testimonial__user-information:first-child {
+}
+
+.testimonial__user-information:last-child {
+}
+
+.testimonial__text {
 }
