@@ -107,16 +107,24 @@ body {
 ** SECTION SOCIAL PROOFS
 -------------------------*/
 .section-social-proofs {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: repeat(4, auto) 19.1875rem;
+  grid-row-gap: 1rem;
+  justify-items: center;
 }
 
 /**------------------- 
 **   TEXT CONTENT
 --------------------*/
 .section-social-proofs > .content {
+  /* justify-self: center; */
   display: flex;
   flex-direction: column;
+
   gap: 1rem;
-  max-width: 274px;
+  min-width: auto;
+  max-width: 350px;
 }
 
 .content__title {
@@ -146,7 +154,8 @@ body {
   background-color: hsl(var(--clr-light-grayish-magenta));
   border-radius: 10px;
   padding: 1rem;
-  width: 100%;
+  min-width: 21.5625rem;
+  /* max-width: 450px; */
 }
 
 .rating__stars {
@@ -163,6 +172,11 @@ body {
 /**------------------- 
 **   TESTIMONIALS
 --------------------*/
+/* this is here to add some space for mobile view */
+.mb-layout--1 {
+  align-self: end;
+}
+
 .testimonial {
   display: flex;
   flex-direction: column;
@@ -172,6 +186,7 @@ body {
   border-radius: 10px;
   padding: 2rem;
 
+  min-width: 16.125rem;
   max-width: 21.5625rem;
 }
 
