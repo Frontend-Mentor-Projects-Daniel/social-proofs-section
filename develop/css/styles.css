@@ -69,7 +69,7 @@ select {
 **   CUSTOM PROPS
 --------------------*/
 :root {
-/* COLOURS */
+  /* COLOURS */
 
   /* FONT FAMILY */
 
@@ -97,4 +97,13 @@ body {
 
   width: 100vw;
   min-height: 100vh;
+}
+
+/**------------------------ 
+** SECTION SOCIAL PROOFS
+-------------------------*/
+.section-social-proofs {
+}
+
+.section-social-proofs > content {
 }
