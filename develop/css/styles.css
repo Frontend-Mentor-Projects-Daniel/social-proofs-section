@@ -74,6 +74,7 @@ select {
 
   /* FONT SIZE */
   --fs-default: 0.9375rem;
+  --fs-rating: 1.0625rem;
 
   /* FONT WEIGHT */
   --fw-regular: 400;
@@ -137,12 +138,26 @@ body {
 **     RATINGS
 --------------------*/
 .rating {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  background-color: hsl(var(--clr-light-grayish-magenta));
+  border-radius: 10px;
+  padding: 1rem;
+  width: 100%;
 }
 
 .rating__stars {
+  display: flex;
+  gap: 0.5rem;
 }
 
 .rating__text {
+  color: hsl(var(--clr-very-dark-magenta));
+  font-size: var(--fs-rating);
+  font-weight: var(--fw-bold);
 }
 
 /**------------------- 
