@@ -47,7 +47,9 @@ select {
   *,
   *::before,
   *::after {
+    -webkit-animation-duration: 0.01ms \!important;
     animation-duration: 0.01ms \!important;
+    -webkit-animation-iteration-count: 1 \!important;
     animation-iteration-count: 1 \!important;
     transition-duration: 0.01ms \!important;
     scroll-behavior: auto \!important;
@@ -80,8 +82,6 @@ select {
   --fw-regular: 400;
   --fw-medium: 500;
   --fw-bold: 700;
-
-  /* BREAKPOINTS */
 }
 
 /**------------------- 
@@ -99,6 +99,9 @@ select {
 **     GENERAL
 --------------------*/
 body {
+  background-image: url(../assets/images/bg-pattern-top-mobile.svg),
+    url(../assets/images/bg-pattern-bottom-mobile.svg);
+  background-repeat: no-repeat;
   font-family: var(--ff-league-spartan);
   font-size: var(--fs-default);
   font-weight: var(--fw-regular);
@@ -111,10 +114,7 @@ body {
   padding: 15px;
 }
 
-@media only screen and (min-width: 768px) {
-  .main {
-  }
-
+@media only screen and (min-width: 48em) {
   body {
     background-image: url(../assets/images/bg-pattern-top-desktop.svg),
       url(../assets/images/bg-pattern-bottom-desktop.svg);
@@ -133,11 +133,12 @@ body {
   margin-right: auto;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) {
   .section-social-proofs {
     display: grid;
     grid-template-columns: repeat(3, 33.333%);
     grid-template-rows: repeat(2, 50%);
+    align-items: center;
     row-gap: 5rem;
   }
 
@@ -155,10 +156,9 @@ body {
   flex-direction: column;
   gap: 1rem;
 
-  min-width: auto;
   max-width: 21.875rem;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) {
   .section-social-proofs > .content {
     grid-column: 1/2;
     grid-row: 1/2;
@@ -180,7 +180,7 @@ body {
   text-align: center;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) {
   .content__title {
     font-size: 3.25rem;
     line-height: 3rem;
@@ -201,7 +201,7 @@ body {
   max-width: 28.563rem;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) {
   .ratings-wrapper {
     grid-column: 2/4;
     grid-row: 1/2;
@@ -225,7 +225,7 @@ body {
   margin-bottom: 1rem;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) {
   .rating {
     flex-direction: row;
     justify-content: flex-start;
@@ -286,7 +286,7 @@ body {
   margin-bottom: 1rem;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48rem) {
   .testimonials-wrapper {
     grid-column: 1/-1;
     grid-row: 2/3;
@@ -305,11 +305,11 @@ body {
   }
 
   .testimonial--2 {
-    transform: translate(20px, 10px);
+    transform: translate(1.25rem, 0.625rem);
   }
 
   .testimonial--3 {
-    transform: translate(40px, 20px);
+    transform: translate(2.5rem, 1.25rem);
   }
 }
 
