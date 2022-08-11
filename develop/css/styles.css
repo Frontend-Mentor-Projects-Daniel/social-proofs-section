@@ -109,6 +109,7 @@ body {
 }
 
 .main {
+  min-height: 100vh;
   margin: 2.5rem auto;
   max-width: 75rem;
   padding: 15px;
